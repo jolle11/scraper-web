@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import HomePage from "./pages/HomePage";
+import MainPage from "./pages/MainPage";
 import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
 
@@ -9,7 +9,7 @@ function App() {
 			<Header />
 			<div className="app">
 				<Routes>
-					<Route path="/" element={<HomePage />} />
+					<Route path="/" element={<MainPage />} />
 				</Routes>
 			</div>
 			<Footer />
