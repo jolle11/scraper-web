@@ -11,17 +11,15 @@ const CustomChartTooltip = ({ label, payload }: ChartTooltipProps) => {
 	}
 
 	return (
-		<Paper px="sm" py="sm" withBorder shadow="md">
+		<Paper px="sm" py="sm" withBorder radius={"xs"} shadow="md">
 			<Text fw={500} mb={5}>
 				{label}
 			</Text>
-			{payload.map((item: any) => (
-				<>
-					<Text key={item.name} c={item.color} fz="sm">
-						{item.price}
-						{item.currency}
-					</Text>
-				</>
+			{payload.map((item) => (
+				<Text key={item.payload.id} fz="sm">
+					{item.payload.price}
+					{item.payload.currency}
+				</Text>
 			))}
 		</Paper>
 	);
