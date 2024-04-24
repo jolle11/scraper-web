@@ -8,7 +8,9 @@ const ProductComponent = ({ product }: { product: IRecord[] }) => {
 
 	return (
 		<>
-			<Title>{name}</Title>
+			<Title pb={20} pt={50}>
+				{name}
+			</Title>
 			<PriceChart product={product} />
 			<PriceTable product={[...product].reverse()} />
 		</>
