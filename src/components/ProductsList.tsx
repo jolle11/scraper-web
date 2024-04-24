@@ -33,7 +33,9 @@ const ProductsList = ({
 		<>
 			{isReady ? (
 				receivedProducts.map((product) => (
-					<ProductComponent product={product} />
+					<>
+						<ProductComponent product={product} />
+					</>
 				))
 			) : (
 				<Center>
