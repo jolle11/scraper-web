@@ -11,7 +11,7 @@ const theme = createTheme({
 	// fontFamilyMonospace: "DM Sans, sans-serif",
 	// headings: { fontFamily: "DM Sans, sans-serif" },
 	defaultRadius: "xl",
-	primaryColor: "indigo",
+	primaryColor: "green",
 	primaryShade: 7,
 });
 
