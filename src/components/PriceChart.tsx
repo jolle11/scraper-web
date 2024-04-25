@@ -26,7 +26,7 @@ const PriceChart = ({ product }: { product: IRecord[] }) => {
 			dotProps={{ r: 2, strokeWidth: 1 }}
 			strokeWidth={1}
 			unit={lastElement?.currency}
-			curveType="stepAfter"
+			curveType="bump"
 			tooltipAnimationDuration={200}
 			yAxisProps={{ domain: [0, YTop + 50] }}
 			xAxisProps={{ padding: { left: 10, right: 10 } }}
