@@ -7,14 +7,15 @@ const PriceChart = ({ product }: { product: IRecord[] }) => {
 	const formatDate = useDateFormat();
 
 	const data = product.map((item) => ({
-		id: item.collectionId,
+		id: item.id,
 		price: item.price,
 		currency: item.currency ?? null,
 		created: formatDate(item.created),
 	}));
 
 	const YTop = Math.ceil(data[0].price / 50) * 50;
-	const lastElement = data.pop();
+	const lastElement = data.slice(-1)[0];
+
 	return (
 		<LineChart
 			h={300}
@@ -28,6 +29,7 @@ const PriceChart = ({ product }: { product: IRecord[] }) => {
 			curveType="stepAfter"
 			tooltipAnimationDuration={200}
 			yAxisProps={{ domain: [0, YTop + 50] }}
+			xAxisProps={{ padding: { left: 10, right: 10 } }}
 			tooltipProps={{
 				content: ({ label, payload }) => (
 					<CustomChartTooltip label={label} payload={payload} />
