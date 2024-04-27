@@ -1,4 +1,4 @@
-import { Title } from "@mantine/core";
+import { Accordion, Title } from "@mantine/core";
 import { IRecord } from "types/IRecord";
 import PriceChart from "components/PriceChart";
 import PriceTable from "components/PriceTable";
@@ -8,11 +8,17 @@ const ProductComponent = ({ product }: { product: IRecord[] }) => {
 
 	return (
 		<>
-			<Title pb={20} pt={50}>
-				{name}
-			</Title>
-			<PriceChart product={product} />
-			<PriceTable product={[...product].reverse()} />
+			<Accordion variant="separated" my={10} radius={"xs"}>
+				<Accordion.Item value={name}>
+					<Accordion.Control>
+						<Title size={"h3"}>{name}</Title>
+					</Accordion.Control>
+					<Accordion.Panel>
+						<PriceChart product={product} />
+						<PriceTable product={[...product].reverse()} />
+					</Accordion.Panel>
+				</Accordion.Item>
+			</Accordion>
 		</>
 	);
 };
