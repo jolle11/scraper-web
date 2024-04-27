@@ -3,6 +3,7 @@ import ProductsList from "components/ProductsList";
 
 const MainPage = () => {
 	const productNameArray = [
+		"horl",
 		"decathlon",
 		"nexx",
 		"powertronic_ecu",
