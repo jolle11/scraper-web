@@ -13,7 +13,7 @@ const ProductsList = ({
 
 	const pb = new PocketBase(import.meta.env.VITE_POCKETHOST_URL);
 
-	const [receivedProducts, setReceivedProducts] = useState<IRecord[]>([]);
+	const [receivedProducts, setReceivedProducts] = useState<any>([]);
 
 	useEffect(() => {
 		const fetchProducts = async () => {
@@ -32,10 +32,8 @@ const ProductsList = ({
 	return (
 		<>
 			{isReady ? (
-				receivedProducts.map((product) => (
-					<>
-						<ProductComponent product={product} />
-					</>
+				receivedProducts.map((product: any) => (
+					<ProductComponent product={product} />
 				))
 			) : (
 				<Center>

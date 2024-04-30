@@ -3,7 +3,7 @@ import { IRecord } from "types/IRecord";
 import PriceChart from "components/PriceChart";
 import PriceTable from "components/PriceTable";
 
-const ProductComponent = ({ product }: { product: IRecord[] }) => {
+const ProductComponent = ({ product }: { product: any }) => {
 	const name: string = product[0].product;
 
 	return (
