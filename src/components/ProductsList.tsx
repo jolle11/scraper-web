@@ -1,7 +1,6 @@
 import ProductComponent from "components/ProductComponent";
 import { useEffect, useState } from "react";
 import PocketBase from "pocketbase";
-import { IRecord } from "types/IRecord";
 import { Center, Loader } from "@mantine/core";
 
 const ProductsList = ({

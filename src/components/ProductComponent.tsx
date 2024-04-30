@@ -1,5 +1,4 @@
 import { Accordion, Title } from "@mantine/core";
-import { IRecord } from "types/IRecord";
 import PriceChart from "components/PriceChart";
 import PriceTable from "components/PriceTable";
 
