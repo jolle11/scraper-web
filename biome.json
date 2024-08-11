@@ -22,7 +22,8 @@
 			"suspicious":
 			{
 				"noConsoleLog": "off",
-				"noExplicitAny": "off"
+				"noExplicitAny": "off",
+				"noArrayIndexKey": "off"
 			},
 			"correctness":
 			{
