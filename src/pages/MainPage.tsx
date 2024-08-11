@@ -1,21 +1,23 @@
 import { Container, Title } from "@mantine/core";
 import ProductsList from "components/ProductsList";
 
-const MainPage = () => {
-	const productNameArray = [
-		"horl",
-		"decathlon",
-		"nexx",
-		"powertronic_ecu",
-		"remarkable",
-		"ruroc",
-		"toe_spacer",
-	];
+const PRODUCT_NAMES = [
+	"horl",
+	"decathlon",
+	"nexx",
+	"powertronic_ecu",
+	"remarkable",
+	"ruroc",
+	"toe_spacer",
+];
 
+const MainPage = () => {
 	return (
-		<Container size={"lg"} my={"xl"}>
-			<Title>A website for my trackings</Title>
-			<ProductsList products={productNameArray} />
+		<Container size="lg" my="xl">
+			<Title order={1} mb="md">
+				My Product Tracking Dashboard
+			</Title>
+			<ProductsList products={PRODUCT_NAMES} />
 		</Container>
 	);
 };

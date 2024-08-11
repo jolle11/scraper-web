@@ -2,15 +2,30 @@ import { Container, Group, Flex, Button } from "@mantine/core";
 import { Github, Instagram, Linkedin, Twitter } from "iconoir-react";
 import { Link } from "react-router-dom";
 
+const SOCIAL_LINKS = [
+	{ icon: Github, url: "https://github.com/jolle11", label: "GitHub" },
+	{
+		icon: Linkedin,
+		url: "https://www.linkedin.com/in/jordi-oll%C3%A9-ballest%C3%A9-8398b181/",
+		label: "LinkedIn",
+	},
+	{ icon: Twitter, url: "https://twitter.com/jordi0lle", label: "Twitter" },
+	{
+		icon: Instagram,
+		url: "https://www.instagram.com/jordi0lle/",
+		label: "Instagram",
+	},
+];
+
 export function Footer() {
 	return (
 		<footer>
-			<Container size={"lg"}>
-				<Flex justify={"space-between"} wrap={"wrap"}>
+			<Container size="lg">
+				<Flex justify="space-between" align="center" wrap="wrap" gap="md">
 					<Link to="https://www.jordi-olle.com">
 						<Button
-							my={12}
-							radius={"xl"}
+							component="span"
+							radius="xl"
 							variant="gradient"
 							gradient={{ from: "indigo", to: "green", deg: 135 }}
 						>
@@ -18,26 +33,23 @@ export function Footer() {
 						</Button>
 					</Link>
 					<Group gap={0} wrap="nowrap">
-						<Link to="https://github.com/jolle11">
-							<Button size="sm" color="green.9" variant="subtle" m={3} p={5}>
-								<Github />
+						{SOCIAL_LINKS.map(({ icon: Icon, url, label }) => (
+							<Button
+								key={url}
+								component="a"
+								href={url}
+								target="_blank"
+								rel="noopener noreferrer"
+								size="sm"
+								color="green.9"
+								variant="subtle"
+								m={3}
+								p={5}
+								aria-label={label}
+							>
+								<Icon />
 							</Button>
-						</Link>
-						<Link to="https://www.linkedin.com/in/jordi-oll%C3%A9-ballest%C3%A9-8398b181/">
-							<Button size="sm" color="green.9" variant="subtle" m={3} p={5}>
-								<Linkedin />
-							</Button>
-						</Link>
-						<Link to="https://twitter.com/jordi0lle">
-							<Button size="sm" color="green.9" variant="subtle" m={3} p={5}>
-								<Twitter />
-							</Button>
-						</Link>
-						<Link to="https://www.instagram.com/jordi0lle/">
-							<Button size="sm" color="green.9" variant="subtle" m={3} p={5}>
-								<Instagram />
-							</Button>
-						</Link>
+						))}
 					</Group>
 				</Flex>
 			</Container>

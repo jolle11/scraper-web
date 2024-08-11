@@ -1,7 +1,7 @@
 import { LineChart } from "@mantine/charts";
 import useDateFormat from "hooks/utils/useDateFormat";
 import CustomChartTooltip from "components/CustomChartTooltip";
-import { IRecord } from "types/IRecord";
+import type { IRecord } from "types/IRecord";
 
 const PriceChart = ({ product }: { product: IRecord[] }) => {
 	const formatDate = useDateFormat();
