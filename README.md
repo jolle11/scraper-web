@@ -1,1 +1,1 @@
-# Charts for my personal web trackings
+# Charts and tables for my personal web trackings
