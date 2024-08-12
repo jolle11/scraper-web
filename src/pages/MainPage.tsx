@@ -2,11 +2,11 @@ import { Container, Title } from "@mantine/core";
 import ProductsList from "components/ProductsList";
 
 const PRODUCT_NAMES = [
-	"horl",
+	"coros",
 	"decathlon",
+	"horl",
 	"nexx",
 	"powertronic_ecu",
-	"remarkable",
 	"ruroc",
 	"toe_spacer",
 ];
