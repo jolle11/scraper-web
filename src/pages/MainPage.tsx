@@ -1,4 +1,5 @@
-import { Container, Title } from "@mantine/core";
+import { Container, Title, Alert } from "@mantine/core";
+import { WarningCircle } from "iconoir-react";
 import ProductsList from "components/ProductsList";
 
 const PRODUCT_NAMES = [
@@ -14,6 +15,15 @@ const PRODUCT_NAMES = [
 const MainPage = () => {
 	return (
 		<Container size="lg" my="xl">
+			<Alert
+				icon={<WarningCircle width="1rem" height="1rem" />}
+				title="Project Discontinued"
+				color="red"
+				mb="xl"
+			>
+				This project is no longer actively maintained and has been discontinued.
+				The information shown may not be up to date.
+			</Alert>
 			<Title order={1} mb="md">
 				My Product Tracking Dashboard
 			</Title>
